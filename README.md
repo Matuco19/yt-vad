@@ -1,4 +1,4 @@
-<center> <img scr="Images/logo.png" > </center>
+<center> <img src="Images/logo.png" > </center>
 
 
 
@@ -22,7 +22,7 @@ I used the following modules:
 
 <h3> Screenshots </h3>
 
-<img scr="images/ytvadScreenshot.png" >
+<img src="images/ytvadScreenshot.png" >
 
 
 
