@@ -1,6 +1,6 @@
 from pytube import YouTube
-#code by Matuco19 Studios
-print("All rights reserved to Matuco19 Studios.")
+#code by Matuco19
+print("All rights reserved to Matuco19.")
 
 def download_media(url, output_path='downloads', media_type='audio'):
     try:
