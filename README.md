@@ -1,4 +1,4 @@
-<center> <img scr="Images/logo.png" /> </center>
+<center> <img scr="Images/logo.png" > </center>
 
 
 
@@ -16,13 +16,13 @@ I used the following modules:
 
 <h3> Roadmap </h3>
 
--[x]Add video support
--[x]Add audio support
--[ ]Add UI
+-[x] Add video support
+-[x] Add audio support
+-[ ] Add UI
 
 <h3> Screenshots </h3>
 
-<img scr="images/ytvadScreenshot.png" />
+<img scr="images/ytvadScreenshot.png" >
 
 
 
