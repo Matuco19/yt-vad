@@ -22,7 +22,7 @@ I used the following modules:
 
 <h3> Screenshots </h3>
 
-<img src="images/ytvadScreenshot.png" >
+<img src="Images/ytvadScreenshot.png" >
 
 
 
