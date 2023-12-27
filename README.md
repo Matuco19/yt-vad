@@ -15,7 +15,7 @@ This is a basic backend project of a YouTube video and audio downloader created 
 I used the following modules: 
 
 ```
- pytube
+pytube
 ```
 
 <h3> Roadmap </h3>
