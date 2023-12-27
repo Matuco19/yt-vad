@@ -1,5 +1,5 @@
 <center> <img scr="Images/logo.png" /> </center>
-[![HitCount](https://hits.dwyl.com/Matuco19/yt-vad.svg)](https://hits.dwyl.com/Matuco19/yt-vad)
+
 
 
 <h2> YT-VAD (YT Video/Audio Downloader) By Matuco19  </h2>
