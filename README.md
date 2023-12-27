@@ -8,6 +8,9 @@
 
 This is a basic backend project of a YouTube video and audio downloader created in Python for learning. 
 
+>[!Warning]
+>I am not responsible for its misuse, this project was created for educational purposes.
+
 I used the following modules: 
 
 ```
