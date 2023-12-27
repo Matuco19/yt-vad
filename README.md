@@ -6,7 +6,7 @@
 
 <h3> About the project </h3>
 
-This is a basic backend project of a YouTube video and audio downloader created in Python for learning. The downloaded content is moved to downloads folder in main script folder.
+This is a basic backend project of a YouTube video and audio downloader created in Python for learning. The downloaded content is moved to download folder in main script folder.
 
 >[!Warning]
 >I am not responsible for its misuse, this project was created for educational purposes.
