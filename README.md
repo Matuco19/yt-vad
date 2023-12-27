@@ -16,9 +16,10 @@ I used the following modules:
 
 <h3> Roadmap </h3>
 
--[X] Add video support
--[X] Add audio support
--[ ] Add UI
+- [x] Add video support
+- [x] Add audio support
+- [ ] Add UI
+
 
 <h3> Screenshots </h3>
 
