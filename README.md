@@ -3,7 +3,7 @@
 
 
 <h2> YT-VAD (YT Video/Audio Downloader)</h2>
-<center> <h3>By Matuco19</h3> </center>
+
 
 <h3> About the project </h3>
 
