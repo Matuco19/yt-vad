@@ -6,8 +6,7 @@ s = Style.BRIGHT
 print(f"{s+Fore.BLUE} All rights reserved to Matuco19.")
 
 def download_media(url, output_path='downloads', media_type='audio'):
-    try:
-      
+    try:     
         yt = YouTube(url)
 
         if media_type == 'audio':
@@ -20,7 +19,6 @@ def download_media(url, output_path='downloads', media_type='audio'):
             print(f"{s+Fore.RED} not supported format, using audio type.")
             media_stream = yt.streams.filter(only_audio=True).first()
             return
-
         
         print(f"{s+Fore.RESET} Downloading {media_type}:{s+Fore.BLUE} {yt.title}")
         media_stream.download(output_path)
