@@ -12,6 +12,7 @@ I used the following modules:
 
 ```
 - pytube
+- colorama
 ```
 
 <h3> Roadmap </h3>
