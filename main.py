@@ -1,32 +1,65 @@
 from pytube import YouTube
-from colorama import Fore, Style
-s = Style.BRIGHT
+from PyQt5 import QtWidgets, QtGui, QtCore
+import sys
 
-#code by Matuco19
-print(f"{s+Fore.BLUE} All rights reserved to Matuco19.")
-
-def download_media(url, output_path='downloads', media_type='audio'):
-    try:     
-        yt = YouTube(url)
-
-        if media_type == 'audio':
-            
-            media_stream = yt.streams.filter(only_audio=True).first()
-        elif media_type == 'video':
-         
-            media_stream = yt.streams.filter(only_video=True).first()
-        else:
-            print(f"{s+Fore.RED} not supported format, using audio type.")
-            media_stream = yt.streams.filter(only_audio=True).first()
-            return
+class YouTubeDownloader(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
         
-        print(f"{s+Fore.RESET} Downloading {media_type}:{s+Fore.BLUE} {yt.title}")
-        media_stream.download(output_path)
-        print(f"{s+Fore.GREEN} Finished Download! {s+Fore.RESET}")
+        self.setWindowTitle('YT-VAD By Matuco19')
+        self.setGeometry(200, 200, 400, 200)
+        
+        layout = QtWidgets.QVBoxLayout()
+        
+        self.url_label = QtWidgets.QLabel('Put your URL:')
+        self.url_input = QtWidgets.QLineEdit(self)
+        layout.addWidget(self.url_label)
+        layout.addWidget(self.url_input)
+        
+        self.media_type_label = QtWidgets.QLabel('Video or audio (video/audio):')
+        self.media_type_combo = QtWidgets.QComboBox(self)
+        self.media_type_combo.addItems(['audio', 'video'])
+        layout.addWidget(self.media_type_label)
+        layout.addWidget(self.media_type_combo)
+        
+        self.download_button = QtWidgets.QPushButton('Download', self)
+        self.download_button.clicked.connect(self.download_media)
+        layout.addWidget(self.download_button)
+        
+        self.message_box = QtWidgets.QTextEdit(self)
+        self.message_box.setReadOnly(True)
+        layout.addWidget(self.message_box)
+        
+        self.setLayout(layout)
 
-    except Exception as e:
-        print(f"Shit! There is an error: {s+Fore.RED} {e} {s+Fore.RESET}")
+    def download_media(self):
+        url = self.url_input.text()
+        media_type = self.media_type_combo.currentText()
+        output_path = 'downloads'
+        try:     
+            yt = YouTube(url)
 
+            if media_type == 'audio':
+                media_stream = yt.streams.filter(only_audio=True).first()
+            elif media_type == 'video':
+                media_stream = yt.streams.filter(only_video=True).first()
+            else:
+                self.message_box.append("Not supported format, using audio type.")
+                media_stream = yt.streams.filter(only_audio=True).first()
+                return
+            
+            self.message_box.append(f"Downloading {media_type}: {yt.title}")
+            media_stream.download(output_path)
+            self.message_box.append("Finished Download!")
+            
+        except Exception as e:
+            self.message_box.append(f"Shit! There is an error: {e}")
 
-url = input(f"{s+Fore.RESET} Put your URL: {s+Fore.BLUE} ")
-download_media(url, media_type=input(f"{s+Fore.RESET} Video or audio(video/audio): "))
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    downloader = YouTubeDownloader()
+    downloader.show()
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()

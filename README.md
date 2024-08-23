@@ -7,7 +7,7 @@
 
 <h3> About the project </h3>
 
-This is a basic backend project of a YouTube video and audio downloader created in Python for learning. The downloaded content is moved to download folder in main script folder. More features will be added over time.
+This is a basic backend project of a YouTube video and audio downloader created in Python for learning. The downloaded content is moved to download folder in main script folder. 
 
 >[!Warning]
 >I am not responsible for its misuse, this project was created for educational purposes.
@@ -17,14 +17,15 @@ I used the following modules:
 
 ```
 - pytube
-- colorama
+- PyQt5
+- sys
 ```
 
 <h3> Roadmap </h3>
 
 - [x] Add video support
 - [x] Add audio support
-- [ ] Add UI
+- [x] Add UI
 
 
 <h3> Screenshots </h3>
